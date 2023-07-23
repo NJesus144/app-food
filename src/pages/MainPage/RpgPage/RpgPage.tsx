@@ -1,3 +1,11 @@
+import { Head } from '../../../components/Head/Head';
+import { GameTitle } from '../../../components/GameTitle/GameTitle';
+
 export function RpgPage() {
-  return <h1>RPG</h1>;
+  return (
+    <>
+      <Head title="RPG" />
+      <GameTitle>RPG</GameTitle>
+    </>
+  );
 }

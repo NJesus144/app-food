@@ -1,3 +1,11 @@
+import { Head } from "../../../components/Head/Head";
+import { GameTitle } from "../../../components/GameTitle/GameTitle";
+
 export function FpsPage() {
-  return <h1>FPS</h1>;
+  return (
+    <>
+      <Head title="FPS" />
+      <GameTitle>Fps</GameTitle>
+    </>
+  );;
 }
