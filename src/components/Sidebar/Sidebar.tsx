@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { Container } from './styles';
 
@@ -8,11 +9,9 @@ import { ReactComponent as SwordIcon } from '../../assets/sword2.svg';
 export function Sidebar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-
-const handleToggleMenu = () => {
-  setMenuOpen(!menuOpen)
-  
-}
+  const handleToggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <Container isMenuOpen={menuOpen}>
@@ -22,28 +21,28 @@ const handleToggleMenu = () => {
       <nav>
         <ul>
           <li>
-            <a href="#" className="active">
+            <NavLink to="/" >
               <SwordIcon />
-              <span>Ação</span>
-            </a>
+              <span>RPG</span>
+            </NavLink>
           </li>
           <li>
-            <a href="#">
+            <NavLink to="/roguelike" >
               <SwordIcon />
-              <span>Ação</span>
-            </a>
+              <span>ROGUELIKE</span>
+            </NavLink>
           </li>
           <li>
-            <a href="#">
+            <NavLink to="/terror"  >
               <SwordIcon />
-              <span>Ação</span>
-            </a>
+              <span>TERROR</span>
+            </NavLink>
           </li>
           <li>
-            <a href="#">
+            <NavLink to="/fps"  >
               <SwordIcon />
-              <span>Ação</span>
-            </a>
+              <span>FPS</span>
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { MainPage } from './pages/MainPage/MainPage';
 import { RpgPage } from './pages/MainPage/RpgPage/RpgPage';
-import { RogueLike } from './pages/MainPage/RogueLike/RogueLike';
+import { RogueLikePage } from './pages/MainPage/RogueLikePage/RogueLikePage';
+import { TerrorPage } from './pages/MainPage/TerrorPage/Terror';
+import { FpsPage } from './pages/MainPage/FpsPage/FpsPage';
 
 export function AppRoutes() {
   return (
@@ -9,7 +11,9 @@ export function AppRoutes() {
       <Routes>
         <Route path="/" element={<MainPage />}>
           <Route path="/" element={<RpgPage />} />
-          <Route path="/roguelike" element={<RogueLike />} />
+          <Route path="roguelike" element={<RogueLikePage />} />
+          <Route path="terror" element={<TerrorPage />} />
+          <Route path="fps" element={<FpsPage />} />
         </Route>
       </Routes>
     </Router>
