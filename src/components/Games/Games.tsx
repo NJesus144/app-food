@@ -1,5 +1,6 @@
 import { Container } from './styles';
 import { FaShoppingCart } from "react-icons/fa";
+import { currencyFormat } from '../../helpers/currencyFormat';
 
 interface GamesProps {
   games: any[];
@@ -14,7 +15,7 @@ export function Games({ games }: GamesProps) {
           <img src={game.image} alt={game.name} />
           <p>{game.description}</p>
           <div>
-            <strong>{game.price}</strong>
+            <strong>{currencyFormat(game.price)}</strong>
             <button type="button"><FaShoppingCart/></button>
           </div>
         </div>
