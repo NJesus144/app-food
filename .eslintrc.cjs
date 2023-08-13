@@ -10,6 +10,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'standard',
   ],
+
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
@@ -23,6 +24,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'space-before-function-paren': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
   },
-};
+}

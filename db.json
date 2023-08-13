@@ -1,0 +1,74 @@
+{
+  "fps": [
+    {
+      "id": 1,
+      "category": "FPS",
+      "name": "Valorant",
+      "description": "Valorant é um jogo eletrônico multijogador gratuito para jogar de tiro em primeira pessoa desenvolvido e publicado pela Riot Games.",
+      "price": 24.5,
+      "image": "https://t.ctcdn.com.br/8thYvMSLBrCDJq3bh4xsLumTs_s=/1400x788/smart/i587116.jpeg"
+    },
+    {
+      "id": 2,
+      "category": "FPS",
+      "name": "Black",
+      "description": "Black é um jogo de tiro em primeira pessoa desenvolvido pela Criterion Games e publicado pela Electronic Arts para PlayStation 2 e Xbox. O jogo é notável por sua ação altamente estilizada, bem como por sua qualidade de som e foco em efeitos destrutivos durante o jogo.",
+      "price": 24.5,
+      "image": "https://steamuserimages-a.akamaihd.net/ugc/368535631806391876/5C70A7ED64A444F023CF5987A4668B27338C7C19/?imw=1024&imh=576&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+    }
+  ],
+  "rogue-like": [
+    {
+      "id": 1,
+      "category": "Rogue Like",
+      "name": "Isaac",
+      "description": "The Binding of Isaac é um jogo eletrônico independente do gênero roguelike criado e desenvolvido por Edmund McMillen e Florian Himsl, e lançado para Microsoft Windows, OS X e Linux. O título e o enredo do jogo foram inspirados pela história bíblica do sacrifício de Isaque.",
+      "price": 24.5,
+      "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6e95e33e-738e-4ad3-91d5-de97191f9fd8/d884w2j-9c428022-4e66-44c3-b964-b43430791c90.png/v1/fill/w_1024,h_560/binding_of_isaac_rebirth_wallpaper_by_j0000n1233_d884w2j-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTYwIiwicGF0aCI6IlwvZlwvNmU5NWUzM2UtNzM4ZS00YWQzLTkxZDUtZGU5NzE5MWY5ZmQ4XC9kODg0dzJqLTljNDI4MDIyLTRlNjYtNDRjMy1iOTY0LWI0MzQzMDc5MWM5MC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.6Ts7gQ9Y8_RGafLz0F9Bi0cumAhhaZqVEb0nR7TKKHY"
+    },
+    {
+      "id": 2,
+      "category": "Rogue Like",
+      "name": "Vampire Survivors",
+      "description": "Vampire Survivors é um videogame shoot 'em up roguelike de 2022 desenvolvido e publicado por Luca Galante, também conhecido como poncle. Após um período de acesso antecipado a partir de dezembro de 2021, foi lançado para macOS, Windows, Xbox One, Xbox Series X/S, Android e iOS no final de 2022",
+      "price": 24.5,
+      "image": "https://wallpapercave.com/wp/wp11596503.jpg"
+    }
+  ],
+  "rpg": [
+    {
+      "id": 1,
+      "category": "RPG",
+      "name": "Final Fantasy XVI",
+      "description": "Final Fantasy XVI é um jogo eletrônico de RPG de ação desenvolvido e publicado pela Square Enix. É o décimo sexto título principal da série Final Fantasy e foi lançado mundialmente em 22 de junho de 2023 para PlayStation 5.",
+      "price": 24.5,
+      "image": "https://images8.alphacoders.com/132/thumbbig-1322923.webp"
+    },
+    {
+      "id": 2,
+      "category": "RPG",
+      "name": "Shaiya",
+      "description": "MMORPG com tema de fantasia com intenso combate baseado em facções e jogabilidade estratégica.",
+      "price": 24.5,
+      "image": "https://i.pinimg.com/originals/be/d0/29/bed029c7b6dbe14d81a1786272f35f21.jpg"
+    }
+  ],
+  "horror": [
+    {
+      "id": 1,
+      "category": "Terror",
+      "name": "Resident Evil: Village",
+      "description": "Resident Evil: Village, conhecido no Japão como Biohazard: Village é um jogo eletrônico de survival horror desenvolvido e publicado pela Capcom. É a sequência de Resident Evil 7: Biohazard, de 2017, e foi anunciado pela primeira vez no evento de revelação do PlayStation 5 em 11 de junho de 2020.",
+      "price": 24.5,
+      "image": "https://i.redd.it/75bn91ijvc451.png"
+    },
+    {
+      "id": 2,
+      "category": "Terror",
+      "name": "Remnant II",
+      "description": "Remnant 2 é um videogame RPG de ação e tiro em terceira pessoa desenvolvido pela Gunfire Games e publicado pela Gearbox Publishing. Como a sequência de Remnant: From the Ashes, o jogo foi lançado para PlayStation 5, Windows e Xbox Series X/S em julho de 2023.",
+      "price": 24.5,
+      "image": "https://images4.alphacoders.com/129/1294901.jpg"
+    }
+  ]
+}
