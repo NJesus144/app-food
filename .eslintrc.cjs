@@ -8,7 +8,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:react-hooks/recommended',
-    'standard',
+    'standard'
   ],
 
   parser: '@typescript-eslint/parser',
@@ -16,15 +16,16 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: true,
-    tsconfigRootDir: __dirname,
+    tsconfigRootDir: __dirname
   },
   plugins: ['react-refresh'],
   rules: {
+    '@typescript-eslint/no-floating-promises': true,
     'react-refresh/only-export-components': [
       'warn',
-      { allowConstantExport: true },
+      { allowConstantExport: true }
     ],
     'space-before-function-paren': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
-  },
+    '@typescript-eslint/no-non-null-assertion': 'off'
+  }
 }
