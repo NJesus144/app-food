@@ -1,15 +1,19 @@
-import { Container } from './styles'
 import { FaShoppingCart } from 'react-icons/fa'
+
+import { Container } from './styles'
+
+import { useCart } from '../../hooks/useCart'
 import { currencyFormat } from '../../helpers/currencyFormat'
 import { SkeletonGame } from '../SkeletonGame/SkeletonGame'
 import { GameData } from '../../interfaces/GameData'
-
 
 interface GamesProps {
   games: GameData[]
 }
 
 export function Games({ games }: GamesProps) {
+  const { addGameIntoCart } = useCart()
+
   return (
     <Container>
       {!games.length
@@ -21,7 +25,7 @@ export function Games({ games }: GamesProps) {
               <p>{game.description}</p>
               <div>
                 <strong>{currencyFormat(game.price)}</strong>
-                <button type="button">
+                <button type="button" onClick={() => addGameIntoCart(game)}>
                   <FaShoppingCart />
                 </button>
               </div>

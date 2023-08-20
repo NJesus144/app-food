@@ -34,8 +34,32 @@ export function CartProvider({ children }: CartProviderProps) {
   const [cart, setCart] = useState<Game[]>([])
 
   function addGameIntoCart(game: GameData): void {
+    const gameExistentInCart = cart.find(
+      item => item.category === game.category && item.id === game.id
+    )
+
+    if (gameExistentInCart) {
+      const newCart = cart.map(item => {
+        if (item.id === game.id) {
+          const quantity = item.quantity + 1
+          const subtotal = item.price * quantity
+
+          return { ...item, quantity, subtotal }
+        }
+
+        return item
+      })
+    console.log('newCart atualização', newCart)
+
+      setCart(newCart)
+
+      return
+    }
+
     const newGame = { ...game, quantity: 1, subtotal: game.price }
     const newCart = [...cart, newGame]
+
+    console.log('newCart adição', newCart)
 
     setCart(newCart)
   }
