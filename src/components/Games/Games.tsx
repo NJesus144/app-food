@@ -2,8 +2,11 @@ import { Container } from './styles'
 import { FaShoppingCart } from 'react-icons/fa'
 import { currencyFormat } from '../../helpers/currencyFormat'
 import { SkeletonGame } from '../SkeletonGame/SkeletonGame'
+import { GameData } from '../../interfaces/GameData'
+
+
 interface GamesProps {
-  games: any[]
+  games: GameData[]
 }
 
 export function Games({ games }: GamesProps) {

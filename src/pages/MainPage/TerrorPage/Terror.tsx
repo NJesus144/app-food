@@ -4,8 +4,10 @@ import { Head } from '../../../components/Head/Head'
 import { GameTitle } from '../../../components/GameTitle/GameTitle'
 import { Games } from '../../../components/Games/Games'
 import { getHorror } from '../../../services/api'
+import { GameData } from '../../../interfaces/GameData'
+
 export function TerrorPage() {
-  const [horror, setHorror] = useState([])
+  const [horror, setHorror] = useState<GameData[]>([])
 
   useEffect(() => {
     ;(async () => {

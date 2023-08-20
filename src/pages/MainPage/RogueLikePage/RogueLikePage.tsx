@@ -3,9 +3,10 @@ import { Head } from '../../../components/Head/Head'
 import { GameTitle } from '../../../components/GameTitle/GameTitle'
 import { Games } from '../../../components/Games/Games'
 import { getRogueLike } from '../../../services/api'
+import { GameData } from '../../../interfaces/GameData'
 
 export function RogueLikePage() {
-  const [rogueLike, setRogueLike] = useState([])
+  const [rogueLike, setRogueLike] = useState<GameData[]>([])
 
   useEffect(() => {
     ;(async () => {

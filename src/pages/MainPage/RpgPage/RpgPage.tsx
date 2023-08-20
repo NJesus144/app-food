@@ -4,9 +4,10 @@ import { Head } from '../../../components/Head/Head'
 import { GameTitle } from '../../../components/GameTitle/GameTitle'
 import { Games } from '../../../components/Games/Games'
 import { getRpg } from '../../../services/api'
+import { GameData } from '../../../interfaces/GameData'
 
 export function RpgPage() {
-  const [rpg, setRpg] = useState([])
+  const [rpg, setRpg] = useState<GameData[]>([])
 
   useEffect(() => {
     ;(async () => {

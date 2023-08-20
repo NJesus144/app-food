@@ -4,9 +4,10 @@ import { Head } from '../../../components/Head/Head'
 import { GameTitle } from '../../../components/GameTitle/GameTitle'
 import { Games } from '../../../components/Games/Games'
 import { getFps } from '../../../services/api'
+import { GameData } from '../../../interfaces/GameData'
 
 export function FpsPage() {
-  const [fps, setFps] = useState([])
+  const [fps, setFps] = useState<GameData[]>([])
 
   useEffect(() => {
     ;(async () => {
