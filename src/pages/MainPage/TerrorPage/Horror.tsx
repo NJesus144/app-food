@@ -4,14 +4,14 @@ import { Head } from '../../../components/Head/Head'
 import { GameTitle } from '../../../components/GameTitle/GameTitle'
 import { Games } from '../../../components/Games/Games'
 
-export function RogueLikePage() {
-  const { rogueLike } = useGame()
+export function HorrorPage() {
+  const { horror } = useGame()
 
   return (
     <>
-      <Head title="ROGUELIKE" />
-      <GameTitle>Roguelike</GameTitle>
-      <Games games={rogueLike} />
+      <Head title="TERROR" />
+      <GameTitle>Terror</GameTitle>
+      <Games games={horror} />
     </>
   )
 }

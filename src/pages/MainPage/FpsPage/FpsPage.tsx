@@ -1,13 +1,11 @@
-import { useState, useEffect, useContext } from 'react'
+import { useGame } from '../../../hooks/useGame'
 
 import { Head } from '../../../components/Head/Head'
 import { GameTitle } from '../../../components/GameTitle/GameTitle'
 import { Games } from '../../../components/Games/Games'
-import { GameContext } from '../../../Contexts/GameContextProvider'
 
 export function FpsPage() {
-  
-  const { fps } = useContext(GameContext)
+  const { fps } = useGame()
   return (
     <>
       <Head title="FPS" />
