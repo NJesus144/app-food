@@ -20,7 +20,7 @@
   "rogue-like": [
     {
       "id": 1,
-      "category": "Rogue Like",
+      "category": "Rogue-Like",
       "name": "Isaac",
       "description": "The Binding of Isaac é um jogo eletrônico independente do gênero roguelike criado e desenvolvido por Edmund McMillen e Florian Himsl, e lançado para Microsoft Windows, OS X e Linux. O título e o enredo do jogo foram inspirados pela história bíblica do sacrifício de Isaque.",
       "price": 24.5,
@@ -28,7 +28,7 @@
     },
     {
       "id": 2,
-      "category": "Rogue Like",
+      "category": "Rogue-Like",
       "name": "Vampire Survivors",
       "description": "Vampire Survivors é um videogame shoot 'em up roguelike de 2022 desenvolvido e publicado por Luca Galante, também conhecido como poncle. Após um período de acesso antecipado a partir de dezembro de 2021, foi lançado para macOS, Windows, Xbox One, Xbox Series X/S, Android e iOS no final de 2022",
       "price": 24.5,
@@ -56,7 +56,7 @@
   "horror": [
     {
       "id": 1,
-      "category": "Terror",
+      "category": "Horror",
       "name": "Resident Evil: Village",
       "description": "Resident Evil: Village, conhecido no Japão como Biohazard: Village é um jogo eletrônico de survival horror desenvolvido e publicado pela Capcom. É a sequência de Resident Evil 7: Biohazard, de 2017, e foi anunciado pela primeira vez no evento de revelação do PlayStation 5 em 11 de junho de 2020.",
       "price": 24.5,
@@ -64,7 +64,7 @@
     },
     {
       "id": 2,
-      "category": "Terror",
+      "category": "Horror",
       "name": "Remnant II",
       "description": "Remnant 2 é um videogame RPG de ação e tiro em terceira pessoa desenvolvido pela Gunfire Games e publicado pela Gearbox Publishing. Como a sequência de Remnant: From the Ashes, o jogo foi lançado para PlayStation 5, Windows e Xbox Series X/S em julho de 2023.",
       "price": 24.5,

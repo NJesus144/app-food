@@ -1,5 +1,9 @@
 import { createContext, useEffect, useState, ReactNode } from 'react'
+import { toast } from 'react-toastify'
+
 import { GameData } from '../interfaces/GameData'
+
+import { gameEmoji } from '../helpers/gameEmoji'
 
 interface Game extends GameData {
   quantity: number
@@ -33,11 +37,13 @@ export const CartContext = createContext({} as CartContextProps)
 export function CartProvider({ children }: CartProviderProps) {
   const [cart, setCart] = useState<Game[]>([])
 
+  //buscar
   function addGameIntoCart(game: GameData): void {
     const gameExistentInCart = cart.find(
       item => item.category === game.category && item.id === game.id
     )
 
+    //atualizar
     if (gameExistentInCart) {
       const newCart = cart.map(item => {
         if (item.id === game.id) {
@@ -49,17 +55,22 @@ export function CartProvider({ children }: CartProviderProps) {
 
         return item
       })
-    console.log('newCart atualização', newCart)
 
+      toast.success(
+        `${gameEmoji(game.category)} ${game.name} adicionado nos pedidos`
+      )
       setCart(newCart)
 
       return
     }
 
+    //adicionar
     const newGame = { ...game, quantity: 1, subtotal: game.price }
     const newCart = [...cart, newGame]
 
-    console.log('newCart adição', newCart)
+    toast.success(
+      `${gameEmoji(game.category)} ${game.name} adicionado nos pedidos`
+    )
 
     setCart(newCart)
   }

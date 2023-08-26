@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import GameProvider from './contexts/GameContext.tsx'
 
@@ -12,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <GameProvider>
       <CartProvider>
         <AppRoutes />
+        <ToastContainer autoClose={2000} />
       </CartProvider>
     </GameProvider>
     <GlobalStyle />
