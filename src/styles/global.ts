@@ -1,10 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
  * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
+    font-family: Roboto;
   }
 
   html {
@@ -25,7 +26,7 @@ export default createGlobalStyle`
   select,
   textarea,
   button{
-    font: 400 1rem 'Roboto', Helvetica, Arial, sans-serif;
+    font-family: 400 1rem 'Roboto', Helvetica, Arial, sans-serif;
   }   
 
   a{
@@ -42,4 +43,4 @@ export default createGlobalStyle`
     list-style: none;
   } 
 
-`;
+`

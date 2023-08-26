@@ -1,9 +1,10 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom'
 
-import { Container } from './styles';
-import { Sidebar } from '../../components/Sidebar/Sidebar';
+import { Container } from './styles'
+import { Sidebar } from '../../components/Sidebar/Sidebar'
+import { MyOrder } from '../../components/MyOrder/MyOrder'
 
-import logoImg from '../../assets/logo.svg';
+import logoImg from '../../assets/logo.svg'
 
 export function MainPage() {
   return (
@@ -13,6 +14,7 @@ export function MainPage() {
         <img src={logoImg} />
         <Outlet />
       </section>
+      <MyOrder />
     </Container>
-  );
+  )
 }
