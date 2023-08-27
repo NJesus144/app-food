@@ -7,6 +7,7 @@ import minusButton from '../../../../assets/circle-minus.svg'
 import plusButton from '../../../../assets/circle-plus.svg'
 
 import { Container } from './styles'
+import { ConfirmOrder } from '../../../../components/ConfirmOrder/ConfirmOrder'
 
 export function TableDescktop() {
   const { cart, removeGameFromCart, gameCartIncrement, gameCartDecrement } = useCart()
@@ -59,6 +60,7 @@ export function TableDescktop() {
           ))}
         </tbody>
       </table>
+      <ConfirmOrder />
     </Container>
   )
 }
