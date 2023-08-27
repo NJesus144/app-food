@@ -26,7 +26,7 @@ export function TableDescktop() {
         </thead>
         <tbody>
           {cart.map(item => (
-            <tr>
+            <tr key={`${item.name}-${item.id}`}>
               <td>
                 <img src={item.image} alt={item.name} />
               </td>
