@@ -19,6 +19,7 @@ export default createGlobalStyle`
 
   body{
     color: #ffff;
+    background-color: #333;
   }
 
   body,
