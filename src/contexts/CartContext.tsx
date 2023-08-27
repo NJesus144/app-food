@@ -86,15 +86,38 @@ export function CartProvider({ children }: CartProviderProps) {
     setCart(newCart)
   }
 
-  // function updateGameQuantity(game: Game, newQuantity: number)
+  function updateGameQuantity(game: Game, newQuantity: number) {
+    if (newQuantity <= 0) return
+
+    const gameExistentInCart = cart.find(
+      item => item.id === game.id && game.category === item.category
+    )
+
+    if (!gameExistentInCart) return
+
+    const newCart = cart.map(item => {
+      if (
+        item.id === gameExistentInCart.id &&
+        item.category === gameExistentInCart.category
+      ) {
+        return {
+          ...item,
+          quantity: newQuantity,
+          subtotal: item.price * newQuantity,
+        }
+      }
+      return item
+    })
+
+    setCart(newCart)
+  }
 
   function gameCartIncrement(game: Game) {
-    // updateGameQuantity(game, game.quantity + 1)
-
+    updateGameQuantity(game, game.quantity + 1)
   }
 
   function gameCartDecrement(game: Game) {
-    // updateGameQuantity(game, game.quantity - 1)
+    updateGameQuantity(game, game.quantity - 1)
   }
 
   function confirmOrder() {}

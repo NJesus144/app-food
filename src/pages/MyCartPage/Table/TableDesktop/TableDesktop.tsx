@@ -9,7 +9,7 @@ import plusButton from '../../../../assets/circle-plus.svg'
 import { Container } from './styles'
 
 export function TableDescktop() {
-  const { cart, removeGameFromCart, gameCartIncrement } = useCart()
+  const { cart, removeGameFromCart, gameCartIncrement, gameCartDecrement } = useCart()
 
   return (
     <Container>
@@ -37,7 +37,7 @@ export function TableDescktop() {
                 <div>
                   <button
                     type="button"
-                    onClick={() => console.log('Decrementar', item)}
+                    onClick={() => gameCartDecrement(item)}
                   >
                     <img src={minusButton} alt="Remover Item" />
                   </button>
