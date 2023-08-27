@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState, ReactNode } from 'react'
+import { createContext, useState, ReactNode } from 'react'
 import { toast } from 'react-toastify'
 
 import { GameData } from '../interfaces/GameData'
@@ -24,7 +24,10 @@ interface UpdateCartProps {
 interface CartContextProps {
   cart: Game[]
   addGameIntoCart: (game: GameData) => void
-  // removeGameFromCart: ({ id, game }: removeGameFromCart) => void
+  removeGameFromCart: (game: Game) => void
+  gameCartIncrement: (game: Game) => void
+  gameCartDecrement: (game: Game) => void
+  confirmOrder: () => void
   // updateCart: ({ id, game, newQuantity }: UpdateCartProps) => void
 }
 
@@ -75,8 +78,38 @@ export function CartProvider({ children }: CartProviderProps) {
     setCart(newCart)
   }
 
+  function removeGameFromCart(game: Game) {
+    const newCart = cart.filter(
+      item => !(item.id === game.id && item.category === game.category)
+    )
+
+    setCart(newCart)
+  }
+
+  // function updateGameQuantity(game: Game, newQuantity: number)
+
+  function gameCartIncrement(game: Game) {
+    // updateGameQuantity(game, game.quantity + 1)
+
+  }
+
+  function gameCartDecrement(game: Game) {
+    // updateGameQuantity(game, game.quantity - 1)
+  }
+
+  function confirmOrder() {}
+
   return (
-    <CartContext.Provider value={{ cart, addGameIntoCart }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addGameIntoCart,
+        removeGameFromCart,
+        gameCartIncrement,
+        gameCartDecrement,
+        confirmOrder
+      }}
+    >
       {children}
     </CartContext.Provider>
   )
