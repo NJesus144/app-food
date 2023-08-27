@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useCart } from '../../../hooks/useCart'
 import { TableDescktop } from './TableDesktop/TableDesktop'
 import { TableMobile } from './TableMobile/TableMobile'
+import { EmptyCart } from '../../../components/Empty/EmptyCart'
 
 export function Table() {
   const [windowsWidth, setWindowWidth] = useState(
@@ -26,7 +27,7 @@ export function Table() {
   }, [])
 
   if (cart.length === 0)
-    return <h1>Ops! Parece que você não tem pedidos, peça já!</h1>
+    return <EmptyCart title="Ops! Parece que você não tem pedidos, peça já" />
 
   return windowsWidth > 768 ? <TableDescktop /> : <TableMobile />
 }
