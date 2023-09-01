@@ -11,7 +11,7 @@ export function MainPage() {
     <Container>
       <Sidebar />
       <section>
-        <img src={logoImg} />
+        <img src={logoImg} alt="logo da pagina" />
         <Outlet />
       </section>
       <MyOrder />

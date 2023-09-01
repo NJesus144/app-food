@@ -5,6 +5,7 @@ import { RogueLikePage } from './pages/MainPage/RogueLikePage/RogueLikePage'
 import { HorrorPage } from './pages/MainPage/TerrorPage/Horror'
 import { FpsPage } from './pages/MainPage/FpsPage/FpsPage'
 import { MyCartPage } from './pages/MyCartPage/MyCartPage'
+import { Payment } from './pages/Payment/Payment'
 
 export function AppRoutes() {
   return (
@@ -17,6 +18,7 @@ export function AppRoutes() {
           <Route path="fps" element={<FpsPage />} />
         </Route>
         <Route path="cart" element={<MyCartPage />} />
+        <Route path="payment" element={<Payment />} />
       </Routes>
     </Router>
   )
