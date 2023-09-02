@@ -1,6 +1,7 @@
 import { Container, Button } from './styles'
 
-import buyGameImg from '../../assets/buyGames.png'
+import manAndBurgerImg from '../../assets/man-and-burger.svg'
+
 
 interface EmptyCartProps {
   title: string
@@ -10,8 +11,8 @@ export function EmptyCart({ title }: EmptyCartProps) {
   return (
     <Container>
       <h2>{title}</h2>
-      <Button to="/">Checar os jogos</Button>
-      <img src={buyGameImg} alt="Video Game" />
+      <Button to="/">Checar o cardápio</Button>
+      <img src={manAndBurgerImg} alt="Video Game" />
     </Container>
   )
 }

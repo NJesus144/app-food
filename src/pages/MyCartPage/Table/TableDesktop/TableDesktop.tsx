@@ -10,7 +10,7 @@ import { Container } from './styles'
 import { ConfirmOrder } from '../../../../components/ConfirmOrder/ConfirmOrder'
 
 export function TableDescktop() {
-  const { cart, removeGameFromCart, gameCartIncrement, gameCartDecrement } = useCart()
+  const { cart,  addSnackIntoCart,removeSnackFromCart, snackCartDecrement, snackCartIncrement } = useCart()
 
   return (
     <Container>
@@ -38,12 +38,12 @@ export function TableDescktop() {
                 <div>
                   <button
                     type="button"
-                    onClick={() => gameCartDecrement(item)}
+                    onClick={() => snackCartDecrement(item)}
                   >
                     <img src={minusButton} alt="Remover Item" />
                   </button>
                   <span>{`${item.quantity}`.padStart(2, '0')}</span>
-                  <button type="button" onClick={() => gameCartIncrement(item)}>
+                  <button type="button" onClick={() => snackCartIncrement(item)}>
                     <img src={plusButton} alt="Adicionar Item" />
                   </button>
                 </div>
@@ -52,7 +52,7 @@ export function TableDescktop() {
                 <h5>{currencyFormat(item.subtotal)}</h5>
               </td>
               <td>
-                <button type="button" onClick={() => removeGameFromCart(item)}>
+                <button type="button" onClick={() => removeSnackFromCart(item)}>
                   <FaTrashAlt />
                 </button>
               </td>

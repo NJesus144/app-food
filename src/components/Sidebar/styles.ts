@@ -5,7 +5,7 @@ interface ContainerProps {
 }
 
 export const Container = styled.aside<ContainerProps>`
-  background-color: #1b2838;
+  background-color: #dc143c;
 
   ${({ isMenuOpen }) =>
     isMenuOpen
@@ -83,7 +83,7 @@ export const Container = styled.aside<ContainerProps>`
             bottom: 0;
             transform: translateY(-50%);
 
-            background-color: #287dff;
+            background-color: #FFFF00;
             width: 5px;
             height: calc(100% + 10px);
 

@@ -1,27 +1,27 @@
-import {lighten} from 'polished'
-import { styled } from 'styled-components';
+import { darken, lighten } from 'polished'
+import { styled } from 'styled-components'
 
 export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   gap: 1.75rem;
 
-  @media (max-width: 500px){
+  @media (max-width: 500px) {
     grid-template-columns: 1fr;
-  } 
+  }
 
-  .game {
+  .snack {
     position: relative;
-    background: #2279a0;
-    padding: 1,75rem 1.5rem;
+    background: #000;
+    padding: 1.75rem 1.5rem;
     border-radius: 4px;
 
-    span{
+    span {
       position: absolute;
       top: -0.5rem;
       left: -0.5rem;
 
-      background-color: #73ad22;
+      background: red;
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
@@ -32,17 +32,16 @@ export const Container = styled.div`
 
       font-weight: 500;
       font-size: 1.125rem;
-
     }
 
-    h2{
+    h2 {
       margin-bottom: 0.75rem;
       font-weight: 700;
       font-size: 1.5rem;
       text-align: center;
     }
 
-    img{
+    img {
       object-fit: cover;
       width: 100%;
       height: 11.25rem;
@@ -50,23 +49,24 @@ export const Container = styled.div`
       margin-bottom: 0.375rem;
     }
 
-    p{
+    p {
       font-size: 0.875rem;
     }
 
-    div{
-      margin-top: .875rem;
+    div {
+      margin-top: 0.875rem;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      strong{
+      strong {
         font-size: 2rem;
         font-weight: 500;
       }
 
-      button{
-        background: #73ad22;
+      button {
+        background: red;
         width: 3rem;
         height: 3rem;
         border: none;
@@ -76,16 +76,16 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
 
-        svg{
-          color: #fff;
+        svg {
+          fill: #fff;
           width: 1.5rem;
           height: 1.5rem;
         }
 
         &:hover {
-          background: ${lighten(.1, '#73ad22')};
+          background: ${darken(0.1, '#AA2424')};
         }
       }
     }
   }
-`;
+`

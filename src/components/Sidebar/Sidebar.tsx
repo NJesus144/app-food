@@ -1,17 +1,20 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
-import { Container } from './styles';
+import { Container } from './styles'
 
-import menuImg from '../../assets/burguerIcon.png';
-import { ReactComponent as SwordIcon } from '../../assets/sword2.svg';
+import menuImg from '../../assets/burguerIcon.png'
+import { ReactComponent as BurgerIcon } from '../../assets/burger.svg'
+import { ReactComponent as PizzaIcon } from '../../assets/pizza.svg'
+import { ReactComponent as SodaPopIcon } from '../../assets/soda.svg'
+import { ReactComponent as IceCreamIcon } from '../../assets/ice-cream.svg'
 
 export function Sidebar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const handleToggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+    setMenuOpen(!menuOpen)
+  }
 
   return (
     <Container isMenuOpen={menuOpen}>
@@ -21,31 +24,31 @@ export function Sidebar() {
       <nav>
         <ul>
           <li>
-            <NavLink to="/" >
-              <SwordIcon />
-              <span>RPG</span>
+            <NavLink to="/">
+              <BurgerIcon />
+              <span>Hambúrgueres</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/roguelike" >
-              <SwordIcon />
-              <span>ROGUELIKE</span>
+            <NavLink to="pizzas">
+              <PizzaIcon />
+              <span>Pizzas</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/terror"  >
-              <SwordIcon />
-              <span>TERROR</span>
+            <NavLink to="drinks">
+              <SodaPopIcon />
+              <span>Bebidas</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/fps"  >
-              <SwordIcon />
-              <span>FPS</span>
+            <NavLink to="ice-creams">
+              <IceCreamIcon />
+              <span>Sorvetes</span>
             </NavLink>
           </li>
         </ul>
       </nav>
     </Container>
-  );
+  )
 }

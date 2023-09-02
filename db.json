@@ -1,74 +1,200 @@
 {
-  "fps": [
+  "burgers": [
     {
       "id": 1,
-      "category": "FPS",
-      "name": "Valorant",
-      "description": "Valorant é um jogo eletrônico multijogador gratuito para jogar de tiro em primeira pessoa desenvolvido e publicado pela Riot Games.",
-      "price": 24.5,
-      "image": "https://t.ctcdn.com.br/8thYvMSLBrCDJq3bh4xsLumTs_s=/1400x788/smart/i587116.jpeg"
+      "snack": "burger",
+      "name": "Mega",
+      "description": "O artesanal tamanho família recheado com três carnes suculentas, queijo e bacon.",
+      "price": 25.5,
+      "image": "https://i.imgur.com/upjIUnG.jpg"
     },
     {
       "id": 2,
-      "category": "FPS",
-      "name": "Black",
-      "description": "Black é um jogo de tiro em primeira pessoa desenvolvido pela Criterion Games e publicado pela Electronic Arts para PlayStation 2 e Xbox. O jogo é notável por sua ação altamente estilizada, bem como por sua qualidade de som e foco em efeitos destrutivos durante o jogo.",
-      "price": 24.5,
-      "image": "https://steamuserimages-a.akamaihd.net/ugc/368535631806391876/5C70A7ED64A444F023CF5987A4668B27338C7C19/?imw=1024&imh=576&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+      "snack": "burger",
+      "name": "Extra Bacon",
+      "description": "Criado para os amantes de bacon, possui em todas as suas camadas bacon bem assado e ainda queijo e carne.",
+      "price": 23.5,
+      "image": "https://i.imgur.com/B4J04AJ.jpg"
+    },
+    {
+      "id": 3,
+      "snack": "burger",
+      "name": "Tradicional",
+      "description": "O simples também é delicioso, principalmente se envolver nossa carne artesanal e queijo.",
+      "price": 12,
+      "image": "https://i.imgur.com/Jz506jB.jpg"
+    },
+    {
+      "id": 4,
+      "snack": "burger",
+      "name": "Big Carne",
+      "description": "Uma carne artesanal de primeira qualidade com 4cm de altura e uma salada completa com alface, cebola, tomate e outros.",
+      "price": 18.0,
+      "image": "https://i.imgur.com/bF8EdBb.jpg"
+    },
+    {
+      "id": 5,
+      "snack": "burger",
+      "name": "Carne dupla",
+      "description": "Já pensou em comer aquele sanduíche com carne dupla e saborosa, recheada com queijo, molho e salada? Então você pensou exatamente nesse hambúrguer.",
+      "price": 20,
+      "image": "https://i.imgur.com/fdEY2kY.jpg"
     }
   ],
-  "rogue-like": [
+
+  "pizzas": [
     {
       "id": 1,
-      "category": "Rogue-Like",
-      "name": "Isaac",
-      "description": "The Binding of Isaac é um jogo eletrônico independente do gênero roguelike criado e desenvolvido por Edmund McMillen e Florian Himsl, e lançado para Microsoft Windows, OS X e Linux. O título e o enredo do jogo foram inspirados pela história bíblica do sacrifício de Isaque.",
-      "price": 24.5,
-      "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6e95e33e-738e-4ad3-91d5-de97191f9fd8/d884w2j-9c428022-4e66-44c3-b964-b43430791c90.png/v1/fill/w_1024,h_560/binding_of_isaac_rebirth_wallpaper_by_j0000n1233_d884w2j-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTYwIiwicGF0aCI6IlwvZlwvNmU5NWUzM2UtNzM4ZS00YWQzLTkxZDUtZGU5NzE5MWY5ZmQ4XC9kODg0dzJqLTljNDI4MDIyLTRlNjYtNDRjMy1iOTY0LWI0MzQzMDc5MWM5MC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.6Ts7gQ9Y8_RGafLz0F9Bi0cumAhhaZqVEb0nR7TKKHY"
+      "snack": "pizza",
+      "name": "Calabresa",
+      "description": "Pizza recheada com calabresa, cebola, mussarela, orégano e azeitona, tendo uma borda recheada com catupiry.",
+      "price": 25,
+      "image": "https://i.imgur.com/5rjJGkV.jpg"
     },
     {
       "id": 2,
-      "category": "Rogue-Like",
-      "name": "Vampire Survivors",
-      "description": "Vampire Survivors é um videogame shoot 'em up roguelike de 2022 desenvolvido e publicado por Luca Galante, também conhecido como poncle. Após um período de acesso antecipado a partir de dezembro de 2021, foi lançado para macOS, Windows, Xbox One, Xbox Series X/S, Android e iOS no final de 2022",
-      "price": 24.5,
-      "image": "https://wallpapercave.com/wp/wp11596503.jpg"
+      "snack": "pizza",
+      "name": "Portuguesa",
+      "description": "Pizza recheada com presunto, mussarela, ovo, cebola, azeitona, orégano, tomate e molho de tomate, tendo uma borda recheada com catupiry.",
+      "price": 28.5,
+      "image": "https://i.imgur.com/WCoyGoI.png"
+    },
+    {
+      "id": 3,
+      "snack": "pizza",
+      "name": "Frango com Catupiry",
+      "description": "Pizza recheada com frango, catupiry e brócolis, tendo uma borda recheada com catupiry.",
+      "price": 24,
+      "image": "https://i.imgur.com/BuXrO8d.jpg"
+    },
+    {
+      "id": 4,
+      "snack": "pizza",
+      "name": "Napolitana",
+      "description": "Pizza recheada com queijo, mussarela, tomate e couve, tendo uma borda recheada com catupiry.",
+      "price": 30,
+      "image": "https://i.imgur.com/u3DfvCE.jpg"
+    },
+    {
+      "id": 5,
+      "snack": "pizza",
+      "name": "Mussarela",
+      "description": "Pizza recheada com mussarela, tendo uma borda recheada com catupiry. ",
+      "price": 20.5,
+      "image": "https://i.imgur.com/kPNXpa0.jpg"
+    },
+    {
+      "id": 6,
+      "snack": "pizza",
+      "name": "Marguerita",
+      "description": "Pizza recheada com calabresa, mussarela, cebola, azeitona e orégano, tendo uma borda recheada com catupiry.",
+      "price": 25.5,
+      "image": "https://i.imgur.com/AsEfsZN.jpg"
+    },
+    {
+      "id": 7,
+      "snack": "pizza",
+      "name": "Brigadeiro com Morango",
+      "description": "Pizza doce recheada com brigadeiro e morango.",
+      "price": 35.0,
+      "image": "https://i.imgur.com/43yC2Ap.jpg"
+    },
+    {
+      "id": 8,
+      "snack": "pizza",
+      "name": "Banana",
+      "description": "Pizza doce recheada com banana e leite condensado.",
+      "price": 33.5,
+      "image": "https://i.imgur.com/Pcrgg1P.jpg"
+    },
+    {
+      "id": 9,
+      "snack": "pizza",
+      "name": "Chocolate",
+      "description": "Pizza doce recheada com chocolate e bolinhas de chocolate.",
+      "price": 30,
+      "image": "https://i.imgur.com/RahAKkH.jpg"
     }
   ],
-  "rpg": [
+
+  "drinks": [
     {
       "id": 1,
-      "category": "RPG",
-      "name": "Final Fantasy XVI",
-      "description": "Final Fantasy XVI é um jogo eletrônico de RPG de ação desenvolvido e publicado pela Square Enix. É o décimo sexto título principal da série Final Fantasy e foi lançado mundialmente em 22 de junho de 2023 para PlayStation 5.",
-      "price": 24.5,
-      "image": "https://images8.alphacoders.com/132/thumbbig-1322923.webp"
+      "snack": "drink",
+      "name": "Coca-Cola 2L",
+      "description": "A tradicional Coca-Cola que a família brasileira adora.",
+      "price": 12,
+      "image": "https://i.imgur.com/Lg3aKhf.jpg"
     },
     {
       "id": 2,
-      "category": "RPG",
-      "name": "Shaiya",
-      "description": "MMORPG com tema de fantasia com intenso combate baseado em facções e jogabilidade estratégica.",
-      "price": 24.5,
-      "image": "https://i.pinimg.com/originals/be/d0/29/bed029c7b6dbe14d81a1786272f35f21.jpg"
+      "snack": "drink",
+      "name": "Guaraná Antarctica",
+      "description": "O irresistível e saboroso Guaraná Antarctica em sua versão de latinha.",
+      "price": 6.5,
+      "image": "https://i.imgur.com/hOBrOIm.jpg"
+    },
+    {
+      "id": 3,
+      "snack": "drink",
+      "name": "Suco de Abacaxi",
+      "description": "Suco natural de abacaxi com leves incrementos de algumas hortaliças para fortificar sua saúde.",
+      "price": 8,
+      "image": "https://i.imgur.com/VV9qTMh.jpg"
+    },
+    {
+      "id": 4,
+      "snack": "drink",
+      "name": "Suco de Laranja",
+      "description": "Suco natural de laranja para você que é amante dessa fruta.",
+      "price": 8,
+      "image": "https://i.imgur.com/2Lf2gHy.jpg"
     }
   ],
-  "horror": [
+
+  "ice-creams": [
     {
       "id": 1,
-      "category": "Horror",
-      "name": "Resident Evil: Village",
-      "description": "Resident Evil: Village, conhecido no Japão como Biohazard: Village é um jogo eletrônico de survival horror desenvolvido e publicado pela Capcom. É a sequência de Resident Evil 7: Biohazard, de 2017, e foi anunciado pela primeira vez no evento de revelação do PlayStation 5 em 11 de junho de 2020.",
-      "price": 24.5,
-      "image": "https://i.redd.it/75bn91ijvc451.png"
+      "snack": "ice-cream",
+      "name": "Casquinha",
+      "description": "A casquinha crocante e saborosa que nossos clientes amam.",
+      "price": 4.5,
+      "image": "https://i.imgur.com/YGmeoCm.jpg"
     },
     {
       "id": 2,
-      "category": "Horror",
-      "name": "Remnant II",
-      "description": "Remnant 2 é um videogame RPG de ação e tiro em terceira pessoa desenvolvido pela Gunfire Games e publicado pela Gearbox Publishing. Como a sequência de Remnant: From the Ashes, o jogo foi lançado para PlayStation 5, Windows e Xbox Series X/S em julho de 2023.",
-      "price": 24.5,
-      "image": "https://images4.alphacoders.com/129/1294901.jpg"
+      "snack": "ice-cream",
+      "name": "Chocolate com granulado",
+      "description": "Sorvete de chocolate com granulados em chocolate para você se deliciar.",
+      "price": 6,
+      "image": "https://i.imgur.com/osAHOLe.jpg"
+    },
+    {
+      "id": 3,
+      "snack": "ice-cream",
+      "name": "Flocos",
+      "description": "O tradicional flocos vem com cobertura em chocolate para adocicar seu dia.",
+      "price": 7,
+      "image": "https://i.imgur.com/qgnFLiy.jpg"
+    },
+    {
+      "id": 4,
+      "snack": "ice-cream",
+      "name": "Creme",
+      "description": "O simples sorvete de creme com um gosto irresistível.",
+      "price": 6.5,
+      "image": "https://i.imgur.com/dFLysrT.jpg"
+    },
+    {
+      "id": 5,
+      "snack": "ice-cream",
+      "name": "Morango",
+      "description": "O clássico sorvete de morango que deixe tudo mais leve.",
+      "price": 10,
+      "image": "https://i.imgur.com/0TWnEI7.jpg"
     }
   ]
 }
+
+
+

@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { MainPage } from './pages/MainPage/MainPage'
-import { RpgPage } from './pages/MainPage/RpgPage/RpgPage'
-import { RogueLikePage } from './pages/MainPage/RogueLikePage/RogueLikePage'
-import { HorrorPage } from './pages/MainPage/TerrorPage/Horror'
-import { FpsPage } from './pages/MainPage/FpsPage/FpsPage'
+import BurgersPage from './pages/MainPage/Burgers/Burgers'
+import DrinksPage from './pages/MainPage/Drinks/Drinks'
+import IceCreamsPage from './pages/MainPage/IceCreams/IceCreams'
+
+import PizzasPage from './pages/MainPage/Pizzas/Pizzas'
+
 import { MyCartPage } from './pages/MyCartPage/MyCartPage'
 import { Payment } from './pages/Payment/Payment'
 
@@ -12,10 +14,10 @@ export function AppRoutes() {
     <Router>
       <Routes>
         <Route path="/" element={<MainPage />}>
-          <Route path="/" element={<RpgPage />} />
-          <Route path="roguelike" element={<RogueLikePage />} />
-          <Route path="terror" element={<HorrorPage />} />
-          <Route path="fps" element={<FpsPage />} />
+          <Route path="/" element={<BurgersPage />} />
+          <Route path="pizzas" element={<PizzasPage />} />
+          <Route path="drinks" element={<DrinksPage />} />
+          <Route path="ice-creams" element={<IceCreamsPage />} />
         </Route>
         <Route path="cart" element={<MyCartPage />} />
         <Route path="payment" element={<Payment />} />

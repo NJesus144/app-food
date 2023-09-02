@@ -1,8 +1,9 @@
-export interface GameData {
+export interface SnackData {
   id: number
-  category: string
+  snack: string
   name: string
-  image: string
   description: string
+  image: string
   price: number
 }
+

@@ -1,14 +1,13 @@
 import axios from 'axios'
-import { GameData } from '../interfaces/GameData'
+import { SnackData } from '../interfaces/SnackData'
 
 const api = axios.create({
   baseURL: 'http://localhost:5173'
 })
 
-export const getFps = () => api.get<GameData[]>('/fps')
-export const getRogueLike = () => api.get<GameData[]>('/rogue-like')
-export const getRpg = () => api.get<GameData[]>('/rpg')
-export const getHorror = () => api.get<GameData[]>('/horror')
+export const getBurgers = () => api.get<SnackData[]>('/burgers')
+export const getPizzas = () => api.get<SnackData[]>('/pizzas')
+export const getDrinks = () => api.get<SnackData[]>('/drinks')
+export const getIceCreams = () => api.get<SnackData[]>('/ice-creams')
 
 export default api
- 

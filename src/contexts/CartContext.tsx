@@ -1,11 +1,11 @@
 import { createContext, useState, ReactNode } from 'react'
 import { toast } from 'react-toastify'
 
-import { GameData } from '../interfaces/GameData'
+import { SnackData } from '../interfaces/SnackData'
 
-import { gameEmoji } from '../helpers/gameEmoji'
+import { snackEmoji } from '../helpers/snackEmoji'
 
-interface Game extends GameData {
+interface Snack extends SnackData {
   quantity: number
   subtotal: number
 }
@@ -22,11 +22,11 @@ interface UpdateCartProps {
 }
 
 interface CartContextProps {
-  cart: Game[]
-  addGameIntoCart: (game: GameData) => void
-  removeGameFromCart: (game: Game) => void
-  gameCartIncrement: (game: Game) => void
-  gameCartDecrement: (game: Game) => void
+  cart: Snack[]
+  addSnackIntoCart: (snack: SnackData) => void
+  removeSnackFromCart: (snack: Snack) => void
+  snackCartIncrement: (snack: Snack) => void
+  snackCartDecrement: (snack: Snack) => void
   confirmOrder: () => void
   // updateCart: ({ id, game, newQuantity }: UpdateCartProps) => void
 }
@@ -38,18 +38,18 @@ interface CartProviderProps {
 export const CartContext = createContext({} as CartContextProps)
 
 export function CartProvider({ children }: CartProviderProps) {
-  const [cart, setCart] = useState<Game[]>([])
+  const [cart, setCart] = useState<Snack[]>([])
 
   //buscar
-  function addGameIntoCart(game: GameData): void {
+  function addSnackIntoCart(snack: SnackData): void {
     const gameExistentInCart = cart.find(
-      item => item.category === game.category && item.id === game.id
+      item => item.snack === snack.snack && item.id === snack.id
     )
 
     //atualizar
     if (gameExistentInCart) {
       const newCart = cart.map(item => {
-        if (item.id === game.id) {
+        if (item.id === snack.id) {
           const quantity = item.quantity + 1
           const subtotal = item.price * quantity
 
@@ -60,7 +60,7 @@ export function CartProvider({ children }: CartProviderProps) {
       })
 
       toast.success(
-        `${gameEmoji(game.category)} ${game.name} adicionado nos pedidos`
+        `${snackEmoji(snack.snack)} ${snack.name} adicionado nos pedidos`
       )
       setCart(newCart)
 
@@ -68,29 +68,29 @@ export function CartProvider({ children }: CartProviderProps) {
     }
 
     //adicionar
-    const newGame = { ...game, quantity: 1, subtotal: game.price }
+    const newGame = { ...snack, quantity: 1, subtotal: snack.price }
     const newCart = [...cart, newGame]
 
     toast.success(
-      `${gameEmoji(game.category)} ${game.name} adicionado nos pedidos`
+      `${snackEmoji(snack.snack)} ${snack.name} adicionado nos pedidos`
     )
 
     setCart(newCart)
   }
 
-  function removeGameFromCart(game: Game) {
+  function removeSnackFromCart(snack: Snack) {
     const newCart = cart.filter(
-      item => !(item.id === game.id && item.category === game.category)
+      item => !(item.id === snack.id && item.snack === snack.snack)
     )
 
     setCart(newCart)
   }
 
-  function updateGameQuantity(game: Game, newQuantity: number) {
+  function updateSnackQuantity(snack: Snack, newQuantity: number) {
     if (newQuantity <= 0) return
 
     const gameExistentInCart = cart.find(
-      item => item.id === game.id && game.category === item.category
+      item => item.id === snack.id && snack.snack === item.snack
     )
 
     if (!gameExistentInCart) return
@@ -98,12 +98,12 @@ export function CartProvider({ children }: CartProviderProps) {
     const newCart = cart.map(item => {
       if (
         item.id === gameExistentInCart.id &&
-        item.category === gameExistentInCart.category
+        item.snack === gameExistentInCart.snack
       ) {
         return {
           ...item,
           quantity: newQuantity,
-          subtotal: item.price * newQuantity,
+          subtotal: item.price * newQuantity
         }
       }
       return item
@@ -112,12 +112,12 @@ export function CartProvider({ children }: CartProviderProps) {
     setCart(newCart)
   }
 
-  function gameCartIncrement(game: Game) {
-    updateGameQuantity(game, game.quantity + 1)
+  function snackCartIncrement(snak: Snack) {
+    updateSnackQuantity(snak, snak.quantity + 1)
   }
 
-  function gameCartDecrement(game: Game) {
-    updateGameQuantity(game, game.quantity - 1)
+  function snackCartDecrement(snak: Snack) {
+    updateSnackQuantity(snak, snak.quantity - 1)
   }
 
   function confirmOrder() {}
@@ -126,10 +126,10 @@ export function CartProvider({ children }: CartProviderProps) {
     <CartContext.Provider
       value={{
         cart,
-        addGameIntoCart,
-        removeGameFromCart,
-        gameCartIncrement,
-        gameCartDecrement,
+        addSnackIntoCart,
+        removeSnackFromCart,
+        snackCartIncrement,
+        snackCartDecrement,
         confirmOrder
       }}
     >

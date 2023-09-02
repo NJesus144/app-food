@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logoImg from '../../assets/logo-game-controller-2.png'
+import logoImg from '../../assets/logo.svg'
 import { Container } from './styles'
 import { useCart } from '../../hooks/useCart'
 import { FaShoppingCart } from 'react-icons/fa'
@@ -10,7 +10,7 @@ export function OrderHeader() {
   return (
     <Container>
       <Link to="/">
-        <img src={logoImg} alt="Game" />
+        <img src={logoImg} alt="Food Commerce" />
       </Link>
       <div>
         <div>
