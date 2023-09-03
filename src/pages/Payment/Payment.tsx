@@ -1,26 +1,54 @@
+import { useForm, SubmitHandler } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
+
 import { Head } from '../../components/Head/Head'
 import { PayOrder } from '../../components/OrderCloseAction/PayOrder/PayOrder'
 import { OrderHeader } from '../../components/OrderHeader/OrderHeader'
 
 import { Container, Inner, Form } from './styles'
 
+const schema = yup
+  .object({
+    fullName: yup
+      .string()
+      .required('Nome e sobrenome são obrigatórios')
+      .min(4, 'Campo nome e sobrenome deve ter no mínimo 4 caracteres.'),
+    email: yup.string().email().required('E-mail é um campo obrigatório'),
+    mobile: yup.string().required('Telefone é um campo obrigatório')
+  })
+  .required()
+type FieldValues = yup.InferType<typeof schema>
+
 export function Payment() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm<FieldValues>({
+    resolver: yupResolver(schema)
+  })
+  const onSubmit: SubmitHandler<FieldValues> = data => console.log('data', data)
+
   return (
     <Container>
       <Head title="Pagamento" />
       <OrderHeader />
       <Inner>
-        <Form>
+        <Form onSubmit={handleSubmit(onSubmit)}>
           <h4>Informações pessoais</h4>
 
           <div className="field">
-            <label htmlFor="full-name">Nome e sobrenome</label>
+            <label htmlFor="fullName">Nome e sobrenome</label>
             <input
               type="text"
-              id="full-name"
-              name="full-name"
+              id="fullName"
               autoComplete="name"
+              {...register('fullName')}
             />
+            {errors.fullName && (
+              <p className="error">{errors.fullName.message}</p>
+            )}
           </div>
 
           <div className="grouped">
@@ -29,9 +57,12 @@ export function Payment() {
               <input
                 type="email"
                 id="email"
-                name="email"
                 autoComplete="email"
+                {...register('email')}
               />
+              {errors.fullName && (
+                <p className="error">{errors.email.message}</p>
+              )}
             </div>
 
             <div className="field">
@@ -39,9 +70,12 @@ export function Payment() {
               <input
                 type="tel"
                 id="mobile"
-                name="mobile"
                 autoComplete="phone"
+                {...register('mobile')}
               />
+              {errors.fullName && (
+                <p className="error">{errors.mobile.message}</p>
+              )}
             </div>
 
             <div className="field">
@@ -175,8 +209,8 @@ export function Payment() {
               />
             </div>
           </div>
+          <PayOrder />
         </Form>
-        <PayOrder />
       </Inner>
     </Container>
   )
