@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { MainPage } from './pages/MainPage/MainPage'
 import BurgersPage from './pages/MainPage/Burgers/Burgers'
 import DrinksPage from './pages/MainPage/Drinks/Drinks'
@@ -11,17 +11,15 @@ import { Payment } from './pages/Payment/Payment'
 
 export function AppRoutes() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<MainPage />}>
-          <Route path="/" element={<BurgersPage />} />
-          <Route path="pizzas" element={<PizzasPage />} />
-          <Route path="drinks" element={<DrinksPage />} />
-          <Route path="ice-creams" element={<IceCreamsPage />} />
-        </Route>
-        <Route path="cart" element={<MyCartPage />} />
-        <Route path="payment" element={<Payment />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<MainPage />}>
+        <Route path="/" element={<BurgersPage />} />
+        <Route path="pizzas" element={<PizzasPage />} />
+        <Route path="drinks" element={<DrinksPage />} />
+        <Route path="ice-creams" element={<IceCreamsPage />} />
+      </Route>
+      <Route path="cart" element={<MyCartPage />} />
+      <Route path="payment" element={<Payment />} />
+    </Routes>
   )
 }
