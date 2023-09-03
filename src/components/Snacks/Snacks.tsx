@@ -4,7 +4,7 @@ import { Container } from './styles'
 
 import { useCart } from '../../hooks/useCart'
 import { currencyFormat } from '../../helpers/currencyFormat'
-import { SkeletonGame } from '../SkeletonGame/SkeletonGame'
+import { SkeletonSnack } from '../SkeletonSnack/SkeletonSnack'
 import { SnackData } from '../../interfaces/SnackData'
 
 interface SnacksProps {
@@ -17,7 +17,7 @@ export function Snacks({ snacks }: SnacksProps) {
   return (
     <Container>
       {!snacks.length
-        ? [1, 2, 3, 4].map(n => <SkeletonGame key={n} />)
+        ? [1, 2, 3, 4].map(n => <SkeletonSnack key={n} />)
         : snacks.map(snack => {
             const snackExistent = cart.find(
               item => item.snack === snack.snack && item.id === snack.id

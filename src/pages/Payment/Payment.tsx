@@ -1,4 +1,5 @@
 import { Head } from '../../components/Head/Head'
+import { PayOrder } from '../../components/OrderCloseAction/PayOrder/PayOrder'
 import { OrderHeader } from '../../components/OrderHeader/OrderHeader'
 
 import { Container, Inner, Form } from './styles'
@@ -128,7 +129,54 @@ export function Payment() {
               </select>
             </div>
           </div>
+
+          <h4>Pagamento</h4>
+
+          <div className="field">
+            <label htmlFor="credit-card-number">Número do cartão</label>
+            <input
+              type="text"
+              id="credit-card-number"
+              name="credit-card-number"
+              autoComplete="cc-number"
+            />
+          </div>
+
+          <div className="field">
+            <label htmlFor="credit-card-holder-name">
+              Nome impresso no cartão
+            </label>
+            <input
+              type="text"
+              id="credit-card-holder-name"
+              name="credit-card-holder-name"
+              autoComplete="cc-name"
+            />
+          </div>
+
+          <div className="grouped">
+            <div className="field">
+              <label htmlFor="credit-card-expiration">Validade (MM/AA)</label>
+              <input
+                type="text"
+                id="credit-card-expiration"
+                name="credit-card-expiration"
+                autoComplete="cc-exp"
+              />
+            </div>
+
+            <div className="field">
+              <label htmlFor="credit-card-code">Código de segurança (CW)</label>
+              <input
+                type="text"
+                id="credit-card-code"
+                name="credit-card-code"
+                autoComplete="cc-csc"
+              />
+            </div>
+          </div>
         </Form>
+        <PayOrder />
       </Inner>
     </Container>
   )

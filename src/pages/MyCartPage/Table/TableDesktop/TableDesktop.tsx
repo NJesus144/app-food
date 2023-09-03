@@ -7,10 +7,10 @@ import minusButton from '../../../../assets/circle-minus.svg'
 import plusButton from '../../../../assets/circle-plus.svg'
 
 import { Container } from './styles'
-import { ConfirmOrder } from '../../../../components/ConfirmOrder/ConfirmOrder'
+import { ConfirmOrder } from '../../../../components/OrderCloseAction/ConfirmOrder/ConfirmOrder'
 
 export function TableDescktop() {
-  const { cart,  addSnackIntoCart,removeSnackFromCart, snackCartDecrement, snackCartIncrement } = useCart()
+  const { cart, removeSnackFromCart, snackCartDecrement, snackCartIncrement } = useCart()
 
   return (
     <Container>

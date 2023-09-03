@@ -1,6 +1,6 @@
 import { Container } from './styles'
 import { Skeleton } from '../Sekeleton/Skeleton'
-export function SkeletonGame() {
+export function SkeletonSnack() {
   return (
     <div className="skeleton-wrapper">
       <Container>
