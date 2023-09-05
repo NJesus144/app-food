@@ -39,16 +39,25 @@ interface CartProviderProps {
 
 export const CartContext = createContext({} as CartContextProps)
 
-const localStorafeKey = '@foodCommerce:cart'
+const localStorageKey = '@foodCommerce:cart'
 
 export function CartProvider({ children }: CartProviderProps) {
   const navigate = useNavigate()
-  const [cart, setCart] = useState<Snack[]>([])
+  const [cart, setCart] = useState<Snack[]>(() => {
+    const value = localStorage.getItem(localStorageKey)
+
+    if (value) return JSON.parse(value)
+    return []
+  })
 
   function saveCart(data: Snack[]) {
     setCart(data)
 
-    localStorage.setItem(localStorafeKey, JSON.stringify(data))
+    localStorage.setItem(localStorageKey, JSON.stringify(data))
+  }
+
+  function clearCart() {
+    localStorage.removeItem(localStorageKey)
   }
 
   //buscar
@@ -137,6 +146,8 @@ export function CartProvider({ children }: CartProviderProps) {
   function payOrder(customer: CustomerData) {
     console.log('payOrder', cart, customer)
     // chamada de api para o backend
+
+    clearCart() // deve ser executado após retorno positivo da API
 
     return
   }
